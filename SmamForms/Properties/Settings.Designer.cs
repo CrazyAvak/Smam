@@ -94,5 +94,17 @@ namespace SmamForms.Properties {
                 this["dayRent"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public string hasStarted {
+            get {
+                return ((string)(this["hasStarted"]));
+            }
+            set {
+                this["hasStarted"] = value;
+            }
+        }
     }
 }
