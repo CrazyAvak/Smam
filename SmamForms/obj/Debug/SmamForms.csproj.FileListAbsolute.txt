@@ -56,3 +56,4 @@ C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\bin\
 C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\bin\Debug\WebMatrix.Data.xml
 C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\bin\Debug\WebMatrix.WebData.xml
 C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\obj\Debug\SmamForms.SplashScreenForm.resources
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\obj\Debug\SmamForms.startSettings.resources

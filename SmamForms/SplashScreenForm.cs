@@ -39,13 +39,16 @@ namespace SmamForms
         {
             time.Enabled = false;
             Home home = new Home();
+            
             home.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-
+            startSettings start = new startSettings();
+            this.Hide();
+            start.Show();
         }
     }
 }
