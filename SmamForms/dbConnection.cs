@@ -13,7 +13,7 @@ namespace SmamForms
         MySqlConnection conn;
         public dbConnection()
         {
-            string connectionString = "Server=localhost;Database=seriesreminder;Uid=root;Pwd=;";
+            string connectionString = "Server=localhost;Database=smam;Uid=root;Pwd=;";
             conn = new MySqlConnection(connectionString);
             try
             {
