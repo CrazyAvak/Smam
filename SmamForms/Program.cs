@@ -16,7 +16,7 @@ namespace SmamForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SplashScreenForm());
+            Application.Run(new SplashScreenForm()); //moet altijd SplashScreenForm zijn
         }
     }
 }
