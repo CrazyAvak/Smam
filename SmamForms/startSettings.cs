@@ -19,9 +19,34 @@ namespace SmamForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            saveUserSettings save = new saveUserSettings();            
-            save.saveUser(textBoxName.Text,textBoxCity.Text, textBoxStreet.Text, textBoxSchool.Text, textBoxOpleiding.Text, textBoxHuur.Text);
-            save.isInstalled();
+            saveUserSettings save = new saveUserSettings();
+            bool isFilledIn = true;
+            foreach (Control item in this.Controls)
+            {
+                if(item is TextBox)
+                {
+                    if(string.IsNullOrEmpty(((TextBox)item).Text)){
+                        isFilledIn = false;
+                    }
+                }
+            }
+            if(isFilledIn == false)
+            {
+                MessageBox.Show("Niet alle velden zijn ingevuld");
+            }
+            else
+            {
+                save.saveUser(textBoxName.Text, textBoxCity.Text, textBoxStreet.Text, textBoxSchool.Text, textBoxOpleiding.Text, textBoxHuur.Text);
+                save.isInstalled();           
+                Home home = new Home();
+                home.Show();
+                this.Hide();            
+            }            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

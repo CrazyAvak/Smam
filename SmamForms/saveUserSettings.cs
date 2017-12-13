@@ -28,6 +28,7 @@ namespace SmamForms
             Properties.Settings.Default.Education = education;
             Properties.Settings.Default.dayRent = dayrent;            
             Properties.Settings.Default.Save();
+            Console.WriteLine(Properties.Settings.Default.Name);
         }
         public void isInstalled()
         {
