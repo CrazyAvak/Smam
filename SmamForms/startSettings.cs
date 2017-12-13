@@ -37,8 +37,8 @@ namespace SmamForms
             else
             {
                 save.saveUser(textBoxName.Text, textBoxCity.Text, textBoxStreet.Text, textBoxSchool.Text, textBoxOpleiding.Text, textBoxHuur.Text);
-                save.isInstalled();           
-                Home home = new Home();
+                save.isInstalled();
+                homePage home = new homePage();
                 home.Show();
                 this.Hide();            
             }            

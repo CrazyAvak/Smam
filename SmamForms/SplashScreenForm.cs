@@ -42,7 +42,7 @@ namespace SmamForms
         private void Timer_Tick(object sender, EventArgs e)
         {
             time.Enabled = false;
-            Home home = new Home();
+            homePage home = new homePage();
             
             home.Show();
             this.Hide();
