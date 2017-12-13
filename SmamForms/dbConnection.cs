@@ -1,6 +1,6 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +10,11 @@ namespace SmamForms
 {
     class dbConnection
     {
-        MySqlConnection conn;
+        SqlConnection conn;
         public dbConnection()
         {
             string connectionString = "Server=localhost;Database=smam;Uid=root;Pwd=;";
-            conn = new MySqlConnection(connectionString);
+            conn = new SqlConnection(connectionString);
             try
             {
 
