@@ -10,12 +10,17 @@ using System.Windows.Forms;
 
 namespace SmamForms
 {
-    public partial class startSettings : Form
+    public partial class SettingsForm : Form
     {
-        public startSettings()
+        public SettingsForm()
         {
             InitializeComponent();
-            CenterToScreen();
+            CenterToScreen(); //Form in het midden zetten
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Drukte backbutton in");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -24,14 +29,15 @@ namespace SmamForms
             bool isFilledIn = true;
             foreach (Control item in this.Controls)
             {
-                if(item is TextBox)
+                if (item is TextBox)
                 {
-                    if(string.IsNullOrEmpty(((TextBox)item).Text)){
+                    if (string.IsNullOrEmpty(((TextBox)item).Text))
+                    {
                         isFilledIn = false;
                     }
                 }
             }
-            if(isFilledIn == false)
+            if (isFilledIn == false)
             {
                 MessageBox.Show("Niet alle velden zijn ingevuld");
             }
@@ -41,13 +47,9 @@ namespace SmamForms
                 save.isInstalled();
                 homePage home = new homePage();
                 home.Show();
-                this.Hide();            
-            }            
+                this.Hide();
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }
