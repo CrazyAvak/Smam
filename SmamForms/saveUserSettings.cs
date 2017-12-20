@@ -8,13 +8,7 @@ namespace SmamForms
 {
     class saveUserSettings
     {
-        string name;
-        string city;
-        string street;
-        string school;
-        string education;
-        string rentDay;
-
+       
 
         public void getUserSettings()
         {
@@ -34,5 +28,36 @@ namespace SmamForms
         {
             Properties.Settings.Default.hasStarted = "1";
         }
+        public userSetting getSettings()
+        {
+            userSetting setting = new userSetting();
+            setting.Name = Properties.Settings.Default.Name;
+            setting.City = Properties.Settings.Default.City;
+            setting.Street = Properties.Settings.Default.Street;
+            setting.School = Properties.Settings.Default.School;
+            setting.Education = Properties.Settings.Default.Education;
+            setting.RentDay = Properties.Settings.Default.dayRent;
+            return setting;
+        }
+    }
+
+
+
+
+    class userSetting
+    {
+        private string name;
+        private string city;
+        private string street;
+        private string school;
+        private string education;
+        private string rentDay;
+
+        public string Name { get => name; set => name = value; }
+        public string City { get => city; set => city = value; }
+        public string Street { get => street; set => street = value; }
+        public string School { get => school; set => school = value; }
+        public string Education { get => education; set => education = value; }
+        public string RentDay { get => rentDay; set => rentDay = value; }
     }
 }
