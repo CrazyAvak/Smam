@@ -40,3 +40,4 @@ C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\obj\
 C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\obj\Debug\SmamForms.Home.resources
 C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\obj\Debug\SmamForms.csprojResolveAssemblyReference.cache
 C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\obj\Debug\SmamForms.homePage.resources
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\obj\Debug\SmamForms.POI.resources

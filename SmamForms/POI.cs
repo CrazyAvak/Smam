@@ -10,19 +10,13 @@ using System.Windows.Forms;
 
 namespace SmamForms
 {
-    public partial class homePage : Form
+    public partial class POI : Form
     {
-        public homePage()
+        public POI()
         {
             InitializeComponent();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            POI poi = new POI();
-
-            poi.Show();
-            this.Hide();
+            CenterToScreen();
+            
         }
     }
 }
