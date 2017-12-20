@@ -13,12 +13,14 @@ namespace SmamForms
     public partial class Typelist : Form
     {
         private smamController smamControl;
+        private string naamType;
 
-        public Typelist()
+        public Typelist(string naamtype)
         {
             InitializeComponent();
             CenterToScreen(); //Form in het midden zetten
             smamControl = new smamController();
+            this.naamType = naamtype;
         }
 
         private void Typelist_Load(object sender, EventArgs e)

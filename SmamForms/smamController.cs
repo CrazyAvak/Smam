@@ -31,5 +31,11 @@ namespace SmamForms
             ArticleForm articleForm = new ArticleForm(articlename);
             articleForm.Show();
         }
+
+        public void openTypelist(string type)
+        {
+            Typelist typelist = new Typelist(type);
+            typelist.Show();
+        }
     }
 }
