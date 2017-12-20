@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ArticleForm));
             this.buttonBack = new System.Windows.Forms.Button();
             this.labelTitelArticle = new System.Windows.Forms.Label();
-            this.labelTextArticle = new System.Windows.Forms.Label();
             this.pbArticle1 = new System.Windows.Forms.PictureBox();
             this.pbArticle2 = new System.Windows.Forms.PictureBox();
             this.pbArticle3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txtArticleText = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticle2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticle3)).BeginInit();
@@ -69,15 +69,6 @@
             this.labelTitelArticle.Size = new System.Drawing.Size(231, 37);
             this.labelTitelArticle.TabIndex = 1;
             this.labelTitelArticle.Text = "Titel van artikel";
-            // 
-            // labelTextArticle
-            // 
-            this.labelTextArticle.Location = new System.Drawing.Point(12, 52);
-            this.labelTextArticle.MinimumSize = new System.Drawing.Size(234, 0);
-            this.labelTextArticle.Name = "labelTextArticle";
-            this.labelTextArticle.Size = new System.Drawing.Size(234, 550);
-            this.labelTextArticle.TabIndex = 2;
-            this.labelTextArticle.Text = "Tekst van artikel";
             // 
             // pbArticle1
             // 
@@ -127,25 +118,38 @@
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
+            // txtArticleText
+            // 
+            this.txtArticleText.BackColor = System.Drawing.Color.White;
+            this.txtArticleText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtArticleText.Location = new System.Drawing.Point(12, 52);
+            this.txtArticleText.Multiline = true;
+            this.txtArticleText.Name = "txtArticleText";
+            this.txtArticleText.ReadOnly = true;
+            this.txtArticleText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtArticleText.Size = new System.Drawing.Size(234, 547);
+            this.txtArticleText.TabIndex = 9;
+            // 
             // ArticleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(339, 611);
+            this.Controls.Add(this.txtArticleText);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pbArticle3);
             this.Controls.Add(this.pbArticle2);
             this.Controls.Add(this.pbArticle1);
-            this.Controls.Add(this.labelTextArticle);
             this.Controls.Add(this.labelTitelArticle);
             this.Controls.Add(this.buttonBack);
             this.MaximumSize = new System.Drawing.Size(355, 650);
             this.MinimumSize = new System.Drawing.Size(355, 650);
             this.Name = "ArticleForm";
             this.Text = "SMAM";
+            this.Load += new System.EventHandler(this.ArticleForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbArticle1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticle2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticle3)).EndInit();
@@ -161,12 +165,12 @@
 
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Label labelTitelArticle;
-        private System.Windows.Forms.Label labelTextArticle;
         private System.Windows.Forms.PictureBox pbArticle1;
         private System.Windows.Forms.PictureBox pbArticle2;
         private System.Windows.Forms.PictureBox pbArticle3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox txtArticleText;
     }
 }

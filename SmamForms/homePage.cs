@@ -12,9 +12,13 @@ namespace SmamForms
 {
     public partial class homePage : Form
     {
+        private smamController smamControl;
+
         public homePage()
         {
             InitializeComponent();
+            smamControl = new smamController();
         }
+        
     }
 }
