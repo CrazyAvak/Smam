@@ -21,7 +21,6 @@ namespace SmamForms
             }
             catch (Exception)
             {
-
                 MessageBox.Show("not connected");
             }
         }

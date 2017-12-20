@@ -16,7 +16,7 @@ namespace SmamForms
         
         public Article() //constructor
         {
-
+            
         }
 
         //properties
