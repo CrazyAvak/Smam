@@ -46,7 +46,58 @@ namespace SmamForms
             return hint;
 
         }
-
-        
+        public List<string> getGroceryTypes()
+        {
+            DataTable table = new DataTable();
+            conn.Open();
+            string query = "SELECT * FROM `grocery`";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataAdapter myAdapter = new MySqlDataAdapter();
+            myAdapter.SelectCommand = cmd;
+            myAdapter.Fill(table);
+            conn.Close();
+            List<string> types = new List<string>();
+            foreach (DataRow item in table.Rows)
+            {
+                types.Add(item["Name"].ToString());
+            }
+            return types;
+        }
+        private string getGroceryId(string type)
+        {
+            DataTable table = new DataTable();
+            
+            string query = "SELECT * FROM `grocery` WHERE grocery.Name = '" + type + "'" ;
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataAdapter myAdapter = new MySqlDataAdapter();
+            myAdapter.SelectCommand = cmd;
+            myAdapter.Fill(table);
+            
+            string id = "";
+            foreach (DataRow item in table.Rows)
+            {
+                id = item["idGrocery"].ToString();
+            }
+            return id;
+        }
+        public List<string> getGroceryProducts(string type)
+        {
+            DataTable table = new DataTable();
+            conn.Open();
+            string query = " SELECT * FROM `groceryproduct` " +
+                "INNER JOIN groceries_has_grocery ON groceries_has_grocery.Groceries_idGroceries=groceryproduct.idGroceries " +
+                "WHERE groceries_has_grocery.Grocery_idGrocery=" + getGroceryId(type);
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataAdapter myAdapter = new MySqlDataAdapter();
+            myAdapter.SelectCommand = cmd;
+            myAdapter.Fill(table);
+            conn.Close();
+            List<string> products = new List<string>();
+            foreach (DataRow item in table.Rows)
+            {
+                products.Add(item["Name"].ToString());
+            }
+            return products;
+        }
     }
 }

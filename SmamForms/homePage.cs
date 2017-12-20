@@ -33,5 +33,14 @@ namespace SmamForms
             edit = null;
             this.Show();
         }
+
+        private void buttonShoppingList_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            shoppingList shopping = new shoppingList();
+            shopping.ShowDialog();
+            shopping = null;
+            this.Show();
+        }
     }
 }
