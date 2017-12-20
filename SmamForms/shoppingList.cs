@@ -29,10 +29,20 @@ namespace SmamForms
                 comboBoxTypes.Items.Add(type);
             }
             comboBoxTypes.SelectedIndex = 0;
+            fillCheckList();
         }
         private void fillCheckList()
         {
+            foreach (string item in smam.getGroceryProducts(comboBoxTypes.Text))
+            {
+                checkedListBoxProducts.Items.Add(item);
+            }
+        }
 
+        private void comboBoxTypes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            checkedListBoxProducts.Items.Clear();
+            fillCheckList();
         }
     }
 }

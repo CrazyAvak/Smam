@@ -23,7 +23,7 @@ namespace SmamForms
         }
         public List<string> getGroceryProducts(string Type)
         {
-            
+            return dbconn.getGroceryProducts(Type);
         }
     }
 }

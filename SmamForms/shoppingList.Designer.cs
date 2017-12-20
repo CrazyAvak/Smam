@@ -40,9 +40,11 @@
             this.comboBoxTypes.Name = "comboBoxTypes";
             this.comboBoxTypes.Size = new System.Drawing.Size(315, 28);
             this.comboBoxTypes.TabIndex = 0;
+            this.comboBoxTypes.SelectedIndexChanged += new System.EventHandler(this.comboBoxTypes_SelectedIndexChanged);
             // 
             // checkedListBoxProducts
             // 
+            this.checkedListBoxProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBoxProducts.FormattingEnabled = true;
             this.checkedListBoxProducts.Location = new System.Drawing.Point(12, 46);
             this.checkedListBoxProducts.Name = "checkedListBoxProducts";
