@@ -12,9 +12,16 @@ namespace SmamForms
 {
     public partial class homePage : Form
     {
+        smamController smam = new smamController();
         public homePage()
         {
             InitializeComponent();
+            gethint();
+        }
+
+        private void gethint()
+        {
+            labelHint.Text = smam.getHint().Body;
         }
     }
 }
