@@ -55,3 +55,7 @@ D:\smam\SmamForms\obj\Debug\SmamForms.csproj.CoreCompileInputs.cache
 D:\smam\SmamForms\obj\Debug\SmamForms.exe
 D:\smam\SmamForms\obj\Debug\SmamForms.pdb
 D:\smam\SmamForms\obj\Debug\SmamForms.csprojResolveAssemblyReference.cache
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\bin\Debug\MySql.Data.dll
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\bin\Debug\MySql.Data.xml
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\obj\Debug\SmamForms.ArticleForm.resources
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\SmamProftaak\SmamForms\obj\Debug\SmamForms.SettingsForm.resources
