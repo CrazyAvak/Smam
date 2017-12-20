@@ -21,17 +21,15 @@ namespace SmamForms
             if (Debugger.IsAttached)
                 Settings.Default.Reset();
             checkStart();
-
         }
         private void checkStart()
         {
             if(Properties.Settings.Default.hasStarted == "1")
             {
-                 time = new Timer();
+                time = new Timer();
                 time.Interval = 1000;
                 time.Tick += Timer_Tick;
                 time.Enabled = true ;
-
             }
             else
             {
