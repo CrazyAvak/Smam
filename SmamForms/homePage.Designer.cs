@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.labelHint = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -45,14 +45,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tip van de dag";
             // 
-            // labelHint
+            // label2
             // 
-            this.labelHint.AutoSize = true;
-            this.labelHint.Location = new System.Drawing.Point(115, 22);
-            this.labelHint.Name = "labelHint";
-            this.labelHint.Size = new System.Drawing.Size(87, 13);
-            this.labelHint.TabIndex = 1;
-            this.labelHint.Text = "Hier komt een tip";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(115, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Hier komt een tip";
             // 
             // button1
             // 
@@ -99,7 +99,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.labelHint);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "homePage";
             this.Text = "homePage";
@@ -111,7 +111,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelHint;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
