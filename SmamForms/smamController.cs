@@ -17,5 +17,13 @@ namespace SmamForms
         {
             return dbconn.getHint();
         }
+        public List<string> getGroceryTypes()
+        {
+            return dbconn.getGroceryTypes();
+        }
+        public List<string> getGroceryProducts(string Type)
+        {
+            
+        }
     }
 }

@@ -46,7 +46,34 @@ namespace SmamForms
             return hint;
 
         }
-
+        public List<string> getGroceryTypes()
+        {
+            DataTable table = new DataTable();
+            conn.Open();
+            string query = "SELECT * FROM `grocery`";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataAdapter myAdapter = new MySqlDataAdapter();
+            myAdapter.SelectCommand = cmd;
+            myAdapter.Fill(table);
+            conn.Close();
+            List<string> types = new List<string>();
+            foreach (DataRow item in table.Rows)
+            {
+                types.Add(item["Name"].ToString());
+            }
+            return types;
+        }
         
+        public List<string> getGroceryProducts(string type)
+        {
+            DataTable table = new DataTable();
+            conn.Open();
+            string query = "";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            MySqlDataAdapter myAdapter = new MySqlDataAdapter();
+            myAdapter.SelectCommand = cmd;
+            myAdapter.Fill(table);
+            conn.Close();
+        }
     }
 }
