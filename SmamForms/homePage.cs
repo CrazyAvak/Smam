@@ -24,5 +24,14 @@ namespace SmamForms
         {
             labelHint.Text = smam.getHint().Body;
         }
+
+        private void buttonSetting_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            settingsEdit edit = new settingsEdit();
+            edit.ShowDialog();
+            edit = null;
+            this.Show();
+        }
     }
 }
