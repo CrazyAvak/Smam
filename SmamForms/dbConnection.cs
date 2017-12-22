@@ -28,13 +28,8 @@ namespace SmamForms
             }
             catch (Exception exception)
             {
+                ExceptionToText e = new ExceptionToText(exception.ToString());
                 MessageBox.Show("not connected");
-                using (sw = File.AppendText(@"D:\exceptionlog.txt")) //tekstbestand maken indien niet bestaat
-                {
-                    sw.WriteLine(exception.ToString()); //exception details schrijven
-                    sw.WriteLine(DateTime.Now.ToLongDateString() + " - " + DateTime.Now.ToLongTimeString()); //tijd en datum schrijven
-                    sw.WriteLine(""); //wit regel tovoegen
-                }
             }
         }
 
