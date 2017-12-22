@@ -33,5 +33,10 @@ namespace SmamForms
             labelTitelArticle.Text = articleName;
             txtArticleText.Text = smamControl.GetArticleText(articleName); //test
         }
+
+        private void txtArticleText_MouseDown(object sender, MouseEventArgs e)
+        {
+            labelTitelArticle.Focus(); //focussen op een label zorgt ervoor dat er geen knipperende cursor is
+        }
     }
 }

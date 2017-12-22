@@ -34,5 +34,9 @@ namespace SmamForms
         {
             Properties.Settings.Default.hasStarted = "1";
         }
+
+        public override string ToString()
+        {
+            return Properties.Settings.Default.Name.ToString() + " - " + Properties.Settings.Default.City.ToString() + " - " + Properties.Settings.Default.School.ToString() + " - " + Properties.Settings.Default.Education.ToString() + " - " + Properties.Settings.Default.dayRent.ToString();        }
     }
 }

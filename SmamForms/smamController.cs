@@ -9,14 +9,18 @@ namespace SmamForms
     class smamController
     {
         dbConnection dbconn;
+        private Article article;
+
         public smamController()
         {
             dbconn = new dbConnection();
+            article = new Article();
         }
 
         public string GetArticleText(string articlename)
         {
-            return dbconn.GetArticleText(articlename);
+            article.Description = dbconn.GetArticleText(articlename);
+            return article.Description;
         }
 
         //lijst van strings terugsturen naar form met alle titels
@@ -28,7 +32,8 @@ namespace SmamForms
 
         public void openArtikel(string articlename) //één artikel openen
         {
-            ArticleForm articleForm = new ArticleForm(articlename);
+            article.Name = articlename;
+            ArticleForm articleForm = new ArticleForm(article.Name);
             articleForm.Show();
         }
 
@@ -36,6 +41,17 @@ namespace SmamForms
         {
             Typelist typelist = new Typelist(type);
             typelist.Show();
+        }
+
+        public string GetTypeName(string type)
+        {
+            return dbconn.GetTypeName(type);
+        }
+
+        public override string ToString()
+        {
+            //toString methode voor een methode
+            return dbconn.ToString();
         }
     }
 }

@@ -25,7 +25,8 @@ namespace SmamForms
 
         private void Typelist_Load(object sender, EventArgs e)
         {
-            foreach (string item in smamControl.GetArticleTitles(1.ToString()))
+            labelTitle.Text = smamControl.GetTypeName(naamType);
+            foreach (string item in smamControl.GetArticleTitles(naamType))
             {
                 listBox1.Items.Add(item);
             }
@@ -34,8 +35,8 @@ namespace SmamForms
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
             string articlename = listBox1.SelectedItem.ToString();
-            Console.WriteLine(articlename);
             smamControl.openArtikel(articlename);
         }
+
     }
 }

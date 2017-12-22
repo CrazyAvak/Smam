@@ -19,6 +19,15 @@ namespace SmamForms
             InitializeComponent();
             smamControl = new smamController();
         }
-        
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            smamControl.openTypelist(1.ToString()); //recept
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            smamControl.openTypelist(3.ToString()); //huishouden
+        }
     }
 }

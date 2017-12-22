@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace SmamForms
 {
@@ -15,6 +16,7 @@ namespace SmamForms
         private MySqlConnection conn;
         private string connectionString;
         private string output;
+        private StreamWriter sw;
 
         public dbConnection()
         {
@@ -24,9 +26,15 @@ namespace SmamForms
             {
 
             }
-            catch (Exception)
+            catch (Exception exception)
             {
                 MessageBox.Show("not connected");
+                using (sw = File.AppendText(@"D:\exceptionlog.txt")) //tekstbestand maken indien niet bestaat
+                {
+                    sw.WriteLine(exception.ToString()); //exception details schrijven
+                    sw.WriteLine(DateTime.Now.ToLongDateString() + " - " + DateTime.Now.ToLongTimeString()); //tijd en datum schrijven
+                    sw.WriteLine(""); //wit regel tovoegen
+                }
             }
         }
 
@@ -70,6 +78,32 @@ namespace SmamForms
                 articletitles.Add(item["Name"].ToString());
             }
             return articletitles;
+        }
+
+        public string GetTypeName(string type)
+        {
+            if (conn == null)
+            {
+                conn = new MySqlConnection(connectionString);
+            }
+            string query = "Select * FROM type WHERE idtypes = " + type;
+            Console.WriteLine(query);
+            List<string> articletitles = new List<string>();
+            DataTable dataTable = new DataTable();
+            MySqlCommand querycmd = new MySqlCommand(query, conn);
+            MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
+            mySqlDataAdapter.SelectCommand = querycmd;
+            mySqlDataAdapter.Fill(dataTable);
+            foreach (DataRow item in dataTable.Rows)
+            {
+                output = item["typeName"].ToString();
+            }
+            return output;
+        }
+
+        public override string ToString()
+        {
+            return connectionString.ToString();
         }
     }
 }
