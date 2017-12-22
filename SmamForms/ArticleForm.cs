@@ -14,6 +14,7 @@ namespace SmamForms
     {
         private smamController smamControl;
         private string articleName;
+        private int i;
             
         public ArticleForm(string articlename) //constructor
         {
@@ -32,6 +33,19 @@ namespace SmamForms
         {
             labelTitelArticle.Text = articleName;
             txtArticleText.Text = smamControl.GetArticleText(articleName); //test
+            string articleID = smamControl.GetArticleID(articleName);
+            Console.WriteLine(articleID);
+            foreach (string plaatje in smamControl.GetImageURL(articleID))
+            {
+                Console.WriteLine(plaatje);
+                PictureBox p = new PictureBox();
+                p.Size = new System.Drawing.Size(75, 75);
+                p.Location = new System.Drawing.Point(252, 52 + 81 * i);
+                Console.WriteLine(p.Location.ToString());   
+                this.Controls.Add(p);
+                p.Load(plaatje);
+                i++;
+            }
         }
 
         private void txtArticleText_MouseDown(object sender, MouseEventArgs e)

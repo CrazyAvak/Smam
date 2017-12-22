@@ -60,6 +60,16 @@ namespace SmamForms
             return dbconn.GetTypeName(type);
         }
 
+        public List<String> GetImageURL(string articleID)
+        {
+            return dbconn.GetImageURL(articleID);
+        }
+
+        public string GetArticleID(string articlename)
+        {
+            return dbconn.GetArticleID(articlename);
+        }
+
         public override string ToString()
         {
             //toString methode voor een methode

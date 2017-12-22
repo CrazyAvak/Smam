@@ -3,12 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 using System.IO;
 
 namespace SmamForms
@@ -19,7 +17,7 @@ namespace SmamForms
         MySqlConnection conn;         
         private string connectionString;
         private string output;
-        private StreamWriter sw;             
+
         public dbConnection()
         {
             connectionString = "Server=localhost;Database=smamdb;Uid=root;Pwd=;";
@@ -86,7 +84,6 @@ namespace SmamForms
             }
             string query = "Select * FROM type WHERE idtypes = " + type;
             Console.WriteLine(query);
-            List<string> articletitles = new List<string>();
             DataTable dataTable = new DataTable();
             MySqlCommand querycmd = new MySqlCommand(query, conn);
             MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
@@ -170,6 +167,45 @@ namespace SmamForms
                 products.Add(item["Name"].ToString());
             }
             return products;
+        }
+
+        public List<string> GetImageURL(string articleID)
+        {
+            if (conn == null)
+            {
+                conn = new MySqlConnection(connectionString);
+            }
+            string query = "SELECT URL FROM `image` WHERE Article_idArticles = '" + articleID + "'";
+            List<string> articleURL = new List<string>();
+            DataTable dataTable = new DataTable();
+            MySqlCommand querycmd = new MySqlCommand(query, conn);
+            MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
+            mySqlDataAdapter.SelectCommand = querycmd;
+            mySqlDataAdapter.Fill(dataTable);
+            foreach (DataRow item in dataTable.Rows)
+            {
+                articleURL.Add(item["URL"].ToString());
+            }
+            return articleURL;
+        }
+
+        public string GetArticleID(string articlename)
+        {
+            if (conn == null)
+            {
+                conn = new MySqlConnection(connectionString);
+            }
+            string query = "SELECT `idArticles` FROM `article` WHERE `Name` = '" + articlename + "'";
+            DataTable dataTable = new DataTable();
+            MySqlCommand querycmd = new MySqlCommand(query, conn);
+            MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
+            mySqlDataAdapter.SelectCommand = querycmd;
+            mySqlDataAdapter.Fill(dataTable);
+            foreach (DataRow item in dataTable.Rows)
+            {
+                output = item["idArticles"].ToString();
+            }
+            return output;
         }
 
         public override string ToString()
