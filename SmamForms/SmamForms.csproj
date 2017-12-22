@@ -61,6 +61,7 @@
       <DependentUpon>ArticleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="dbConnection.cs" />
+    <Compile Include="ExceptionToText.cs" />
     <Compile Include="Hint.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -109,6 +110,12 @@
     <Compile Include="startSettings.Designer.cs">
       <DependentUpon>startSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Typelist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Typelist.Designer.cs">
+      <DependentUpon>Typelist.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ArticleForm.resx">
       <DependentUpon>ArticleForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="startSettings.resx">
       <DependentUpon>startSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Typelist.resx">
+      <DependentUpon>Typelist.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
