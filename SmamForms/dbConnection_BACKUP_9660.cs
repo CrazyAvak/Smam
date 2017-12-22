@@ -15,15 +15,21 @@ namespace SmamForms
 {
     class dbConnection
     {
-
-        MySqlConnection conn;         
+<<<<<<< HEAD
+        MySqlConnection conn;
+        public dbConnection()
+        {
+            string connectionString = "Server=localhost;Database=smamdb;Uid=root;Pwd=;";
+=======
+        private MySqlConnection conn;
         private string connectionString;
         private string output;
-        private StreamWriter sw;             
+        private StreamWriter sw;
+
         public dbConnection()
         {
             connectionString = "Server=localhost;Database=smamdb;Uid=root;Pwd=;";
-
+>>>>>>> feature/articlequery
             conn = new MySqlConnection(connectionString);
             try
             {
@@ -122,6 +128,7 @@ namespace SmamForms
             }
             return hint;
 
+<<<<<<< HEAD
         }
         public List<string> getGroceryTypes()
         {
@@ -175,12 +182,11 @@ namespace SmamForms
                 products.Add(item["Name"].ToString());
             }
             return products;
-        }
-
+=======
         public override string ToString()
         {
             return connectionString.ToString();
-
+>>>>>>> feature/articlequery
         }
     }
 }

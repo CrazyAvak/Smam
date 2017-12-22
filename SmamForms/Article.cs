@@ -24,5 +24,10 @@ namespace SmamForms
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public string Description { get => description; set => description = value; }
+
+        public override string ToString()
+        {
+            return name + " - " + description;
+        }
     }
 }

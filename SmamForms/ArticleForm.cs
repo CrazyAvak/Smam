@@ -12,15 +12,31 @@ namespace SmamForms
 {
     public partial class ArticleForm : Form
     {
-        public ArticleForm() //constructor
+        private smamController smamControl;
+        private string articleName;
+            
+        public ArticleForm(string articlename) //constructor
         {
             InitializeComponent();
+            smamControl = new smamController();
             CenterToScreen(); //Form in het midden zetten
+            this.articleName = articlename;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Drukte backbutton in");
+        }
+
+        private void ArticleForm_Load(object sender, EventArgs e)
+        {
+            labelTitelArticle.Text = articleName;
+            txtArticleText.Text = smamControl.GetArticleText(articleName); //test
+        }
+
+        private void txtArticleText_MouseDown(object sender, MouseEventArgs e)
+        {
+            labelTitelArticle.Focus(); //focussen op een label zorgt ervoor dat er geen knipperende cursor is
         }
     }
 }

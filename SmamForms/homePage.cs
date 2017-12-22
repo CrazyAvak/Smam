@@ -12,7 +12,8 @@ namespace SmamForms
 {
     public partial class homePage : Form
     {
-        smamController smam;
+
+        smamController smam;        
         public homePage()
         {
             smam = new smamController();
@@ -41,6 +42,19 @@ namespace SmamForms
             shopping.ShowDialog();
             shopping = null;
             this.Show();
+
+            smam = new smamController();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            smam.openTypelist(1.ToString()); //recept
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            smam.openTypelist(3.ToString()); //huishouden
+
         }
     }
 }

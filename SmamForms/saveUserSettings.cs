@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 namespace SmamForms
 {
     class saveUserSettings
-    {
-       
-
+    {       
         public void getUserSettings()
         {
 
+        }
+        public override string ToString()
+        {
+            return Properties.Settings.Default.Name.ToString() + " - " + Properties.Settings.Default.City.ToString() + " - " + Properties.Settings.Default.School.ToString() + " - " + Properties.Settings.Default.Education.ToString() + " - " + Properties.Settings.Default.dayRent.ToString();      
         }
         public void saveUser(string name, string city, string street, string school, string education, string dayrent) {
             Properties.Settings.Default.Name = name;
@@ -28,6 +30,7 @@ namespace SmamForms
         {
             Properties.Settings.Default.hasStarted = "1";
         }
+
         public userSetting getSettings()
         {
             userSetting setting = new userSetting();
@@ -40,9 +43,6 @@ namespace SmamForms
             return setting;
         }
     }
-
-
-
 
     class userSetting
     {
