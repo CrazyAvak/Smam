@@ -11,40 +11,43 @@ namespace SmamForms
         dbConnection dbconn;
         private Article article;
 
+        internal dbConnection Dbconn { get => dbconn; private set => dbconn = value; }
+        internal Article Article { get => article; private set => article = value; }
+
         public smamController()
         {
-            dbconn = new dbConnection();
-            article = new Article();
+            Dbconn = new dbConnection();
+            Article = new Article();
         }
         public Hint getHint()
         {
-            return dbconn.getHint();
+            return Dbconn.getHint();
         }
         public List<string> getGroceryTypes()
         {
-            return dbconn.getGroceryTypes();
+            return Dbconn.getGroceryTypes();
         }
         public List<string> getGroceryProducts(string Type)
         {
-            return dbconn.getGroceryProducts(Type);
+            return Dbconn.getGroceryProducts(Type);
         }
         
         public string GetArticleText(string articlename)
         {
-            article.Description = dbconn.GetArticleText(articlename);
-            return article.Description;
+            article.SetArticleDesc(Dbconn.GetArticleText(articlename));
+            return Article.Description;
         }
 
         //lijst van strings terugsturen naar form met alle titels
 
         public List<string> GetArticleTitles(string type) //alle titels ophalen
         {
-            return dbconn.GetArticleTitles(type); //returned de list
+            return Dbconn.GetArticleTitles(type); //returned de list
         }
 
         public void openArtikel(string articlename) //één artikel openen
         {
-            article.Name = articlename;
+            article.SetArticleName(articlename);
             ArticleForm articleForm = new ArticleForm(article.Name);
             articleForm.Show();
         }
@@ -57,23 +60,23 @@ namespace SmamForms
 
         public string GetTypeName(string type)
         {
-            return dbconn.GetTypeName(type);
+            return Dbconn.GetTypeName(type);
         }
 
         public List<String> GetImageURL(string articleID)
         {
-            return dbconn.GetImageURL(articleID);
+            return Dbconn.GetImageURL(articleID);
         }
 
         public string GetArticleID(string articlename)
         {
-            return dbconn.GetArticleID(articlename);
+            return Dbconn.GetArticleID(articlename);
         }
 
         public override string ToString()
         {
             //toString methode voor een methode
-            return dbconn.ToString();
+            return Dbconn.ToString();
         }
     }
 }

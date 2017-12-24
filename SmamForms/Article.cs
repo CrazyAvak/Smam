@@ -16,14 +16,29 @@ namespace SmamForms
         
         public Article() //constructor
         {
-            
+            images = new List<Image>();
         }
 
         //properties
         public List<Image> Images { get => images; set => images = value; }
         public int Id { get => id; set => id = value; }
-        public string Name { get => name; set => name = value; }
-        public string Description { get => description; set => description = value; }
+        public string Name { get => name; private set => name = value; }
+        public string Description { get => description; private set => description = value; }
+
+        public void SetArticleName(string name)
+        {
+            this.name = name;
+        }
+
+        public void SetArticleDesc(string desc)
+        {
+            this.description = desc;
+        }
+
+        public void AddImageToArticle(Image image)
+        {
+            images.Add(image);
+        }
 
         public override string ToString()
         {

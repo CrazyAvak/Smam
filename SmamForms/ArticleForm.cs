@@ -34,17 +34,17 @@ namespace SmamForms
             labelTitelArticle.Text = articleName;
             txtArticleText.Text = smamControl.GetArticleText(articleName); //test
             string articleID = smamControl.GetArticleID(articleName);
-            Console.WriteLine(articleID);
-            foreach (string plaatje in smamControl.GetImageURL(articleID))
+            foreach (string URL in smamControl.GetImageURL(articleID))
             {
-                Console.WriteLine(plaatje);
-                PictureBox p = new PictureBox();
-                p.Size = new System.Drawing.Size(75, 75);
-                p.Location = new System.Drawing.Point(252, 52 + 81 * i);
-                Console.WriteLine(p.Location.ToString());   
-                this.Controls.Add(p);
-                p.Load(plaatje);
-                i++;
+                Image image = new Image(URL); //nieuw object aanmaken
+                Console.WriteLine(URL); //debuggen
+                PictureBox p = new PictureBox(); //nieuwe picturebox maken
+                p.Size = new System.Drawing.Size(75, 75); //formaat instellen
+                p.Location = new System.Drawing.Point(252, 52 + 81 * i); //locatie instellen
+                Console.WriteLine(p.Location.ToString()); //debuggen
+                this.Controls.Add(p); //toevoegen aan form
+                p.Load(URL); //link laden
+                i++; //voor locatie picturebox
             }
         }
 

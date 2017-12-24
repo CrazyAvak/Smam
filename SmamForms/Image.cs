@@ -13,9 +13,9 @@ namespace SmamForms
         private string name;
         private string url;
 
-        public Image() //constructor
+        public Image(string URL) //constructor
         {
-
+            this.url = URL;
         }
 
         //properties
