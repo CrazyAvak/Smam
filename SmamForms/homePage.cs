@@ -56,5 +56,14 @@ namespace SmamForms
             smam.openTypelist(3.ToString()); //huishouden
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            POI poi = new POI();
+            poi.ShowDialog();
+            poi = null;
+            this.Show();
+        }
     }
 }
