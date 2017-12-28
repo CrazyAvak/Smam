@@ -15,6 +15,7 @@ namespace SmamForms
         private smamController smamControl;
         private string articleName;
         private int i;
+        private bool heeftafbeelding;
             
         public ArticleForm(string articlename) //constructor
         {
@@ -26,7 +27,6 @@ namespace SmamForms
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Drukte backbutton in");
             this.Hide();
         }
 
@@ -36,6 +36,7 @@ namespace SmamForms
             labelTitelArticle.Left = (this.ClientSize.Width - labelTitelArticle.Width) / 2;
             txtArticleText.Text = smamControl.GetArticleText(articleName); //test
             string articleID = smamControl.GetArticleID(articleName);
+            heeftafbeelding = false;
             foreach (string URL in smamControl.GetImageURL(articleID))
             {
                 Image image = new Image(URL); //nieuw object aanmaken
@@ -47,18 +48,15 @@ namespace SmamForms
                 this.Controls.Add(p); //toevoegen aan form
                 p.Load(URL); //link laden
                 i++; //voor locatie picturebox
+                heeftafbeelding = true;
             }
-            foreach (Control c in Controls)
+            if (heeftafbeelding)
             {
-                if (c is PictureBox)
-                {
-                    txtArticleText.Width = 234;
-                    break;
-                }
-                else
-                {
-                    txtArticleText.Width = 315;
-                }
+                txtArticleText.Width = 234; //smal
+            }
+            else
+            {
+                txtArticleText.Width = 315; //breed
             }
         }
 

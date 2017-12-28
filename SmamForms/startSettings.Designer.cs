@@ -34,7 +34,6 @@
             this.textBoxStreet = new System.Windows.Forms.TextBox();
             this.textBoxSchool = new System.Windows.Forms.TextBox();
             this.textBoxOpleiding = new System.Windows.Forms.TextBox();
-            this.textBoxHuur = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +42,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.numericUpDownHuur = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHuur)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -94,14 +95,6 @@
             this.textBoxOpleiding.Name = "textBoxOpleiding";
             this.textBoxOpleiding.Size = new System.Drawing.Size(315, 26);
             this.textBoxOpleiding.TabIndex = 5;
-            // 
-            // textBoxHuur
-            // 
-            this.textBoxHuur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHuur.Location = new System.Drawing.Point(12, 414);
-            this.textBoxHuur.Name = "textBoxHuur";
-            this.textBoxHuur.Size = new System.Drawing.Size(315, 26);
-            this.textBoxHuur.TabIndex = 6;
             // 
             // button1
             // 
@@ -177,11 +170,29 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Dag huur";
             // 
+            // numericUpDownHuur
+            // 
+            this.numericUpDownHuur.Location = new System.Drawing.Point(12, 414);
+            this.numericUpDownHuur.Maximum = new decimal(new int[] {
+            28,
+            0,
+            0,
+            0});
+            this.numericUpDownHuur.Name = "numericUpDownHuur";
+            this.numericUpDownHuur.Size = new System.Drawing.Size(315, 20);
+            this.numericUpDownHuur.TabIndex = 15;
+            this.numericUpDownHuur.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // startSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 611);
+            this.Controls.Add(this.numericUpDownHuur);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -190,7 +201,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBoxHuur);
             this.Controls.Add(this.textBoxOpleiding);
             this.Controls.Add(this.textBoxSchool);
             this.Controls.Add(this.textBoxStreet);
@@ -199,6 +209,7 @@
             this.Controls.Add(this.label1);
             this.Name = "startSettings";
             this.Text = "Smam";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHuur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,7 +223,6 @@
         private System.Windows.Forms.TextBox textBoxStreet;
         private System.Windows.Forms.TextBox textBoxSchool;
         private System.Windows.Forms.TextBox textBoxOpleiding;
-        private System.Windows.Forms.TextBox textBoxHuur;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
@@ -221,5 +231,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown numericUpDownHuur;
     }
 }

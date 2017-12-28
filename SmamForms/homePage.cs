@@ -26,15 +26,23 @@ namespace SmamForms
 
         private void fillHint()
         {
-            try
+            Console.WriteLine(DateTime.Today.Day.ToString());
+            Console.WriteLine(Properties.Settings.Default.dayRent.ToString());
+            if (DateTime.Today.Day.ToString() == Properties.Settings.Default.dayRent.ToString()) //als vandaag huur moet worden betaald
             {
-                labelHint.Text = smam.getHint().Body;
-
+                labelHint.Text = "Vergeet vandaag niet de huur te betalen!";
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Het is niet gelukt om verbinding te maken met de server. SMAM zal nu sluiten.");
-                Application.Exit();
+                try
+                {
+                    labelHint.Text = smam.getHint().Body;
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Het is niet gelukt om verbinding te maken met de server. SMAM zal nu sluiten.");
+                    Application.Exit();
+                }
             }
         }
 

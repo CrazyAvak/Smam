@@ -130,7 +130,7 @@
             this.Controls.Add(this.labelHint);
             this.Controls.Add(this.labelTipVDDag);
             this.Name = "homePage";
-            this.Text = "homePage";
+            this.Text = "SMAM";
             this.ResumeLayout(false);
             this.PerformLayout();
 

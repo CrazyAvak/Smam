@@ -35,7 +35,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxHuur = new System.Windows.Forms.TextBox();
             this.textBoxOpleiding = new System.Windows.Forms.TextBox();
             this.textBoxSchool = new System.Windows.Forms.TextBox();
             this.textBoxStreet = new System.Windows.Forms.TextBox();
@@ -44,6 +43,8 @@
             this.labelTitel = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.numericUpDownHuur = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHuur)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -99,14 +100,6 @@
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 21;
             this.label2.Text = "Naam";
-            // 
-            // textBoxHuur
-            // 
-            this.textBoxHuur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHuur.Location = new System.Drawing.Point(12, 361);
-            this.textBoxHuur.Name = "textBoxHuur";
-            this.textBoxHuur.Size = new System.Drawing.Size(315, 26);
-            this.textBoxHuur.TabIndex = 20;
             // 
             // textBoxOpleiding
             // 
@@ -183,11 +176,29 @@
             this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // numericUpDownHuur
+            // 
+            this.numericUpDownHuur.Location = new System.Drawing.Point(12, 361);
+            this.numericUpDownHuur.Maximum = new decimal(new int[] {
+            28,
+            0,
+            0,
+            0});
+            this.numericUpDownHuur.Name = "numericUpDownHuur";
+            this.numericUpDownHuur.Size = new System.Drawing.Size(315, 20);
+            this.numericUpDownHuur.TabIndex = 30;
+            this.numericUpDownHuur.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // settingsEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 611);
+            this.Controls.Add(this.numericUpDownHuur);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.labelTitel);
@@ -197,7 +208,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxHuur);
             this.Controls.Add(this.textBoxOpleiding);
             this.Controls.Add(this.textBoxSchool);
             this.Controls.Add(this.textBoxStreet);
@@ -205,6 +215,7 @@
             this.Controls.Add(this.textBoxName);
             this.Name = "settingsEdit";
             this.Text = "settingsEdit";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHuur)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,7 +229,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxHuur;
         private System.Windows.Forms.TextBox textBoxOpleiding;
         private System.Windows.Forms.TextBox textBoxSchool;
         private System.Windows.Forms.TextBox textBoxStreet;
@@ -227,5 +237,6 @@
         private System.Windows.Forms.Label labelTitel;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.NumericUpDown numericUpDownHuur;
     }
 }

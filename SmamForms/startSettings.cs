@@ -38,7 +38,7 @@ namespace SmamForms
             }
             else
             {
-                save.saveUser(textBoxName.Text, textBoxCity.Text, textBoxStreet.Text, textBoxSchool.Text, textBoxOpleiding.Text, textBoxHuur.Text);
+                save.saveUser(textBoxName.Text, textBoxCity.Text, textBoxStreet.Text, textBoxSchool.Text, textBoxOpleiding.Text, numericUpDownHuur.Value.ToString());
                 Properties.Settings.Default.hasStarted = 1.ToString();
                 save.isInstalled();
                 homePage home = new homePage();
