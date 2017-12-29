@@ -20,6 +20,8 @@ namespace SmamForms
             InitializeComponent();
             CenterToScreen();
             fillHint();
+            labelTipVDDag.Left = (this.ClientSize.Width - labelTipVDDag.Width) / 2;
+            labelHint.Left = (this.ClientSize.Width - labelHint.Width) / 2;
         }   
 
         private void fillHint()
@@ -74,6 +76,13 @@ namespace SmamForms
             POI poi = new POI(); //poi
             poi.ShowDialog();
             poi = null;
+            this.Show();
+        }
+
+        private void buttonFinancien_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            smam.openTypelist(2.ToString()); //huishouden
             this.Show();
         }
     }

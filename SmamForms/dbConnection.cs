@@ -38,7 +38,7 @@ namespace SmamForms
             {
                 conn = new MySqlConnection(connectionString);
             }
-            string query = "SELECT * FROM article WHERE Name = '" + articlename + "'"; //is test van database
+            string query = "SELECT * FROM article WHERE Name = '" + articlename + "'";
             Console.WriteLine(query);
             DataTable dataTable = new DataTable();
             MySqlCommand querycmd = new MySqlCommand(query, conn);

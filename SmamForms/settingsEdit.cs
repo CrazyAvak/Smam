@@ -19,6 +19,7 @@ namespace SmamForms
             InitializeComponent();
             smam = new smamController();
             getSettings();
+            labelTitel.Left = (this.ClientSize.Width - labelTitel.Width) / 2;
         }
 
         private void getSettings()

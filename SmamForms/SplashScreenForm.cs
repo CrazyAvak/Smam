@@ -14,25 +14,25 @@ namespace SmamForms
 {
     public partial class SplashScreenForm : Form
     {
-        Timer time;
+        private Timer time;
         public SplashScreenForm()
         {
             InitializeComponent();
             CenterToScreen();
-            if (Debugger.IsAttached)
-            {
-                Settings.Default.Reset();
-            }
+            time = new Timer();
+            //if (Debugger.IsAttached)
+            //{
+             //   Settings.Default.Reset();
+            //}
             checkStart();
         }
         private void checkStart()
         {
-            if(Properties.Settings.Default.hasStarted == "1")
+            if (Properties.Settings.Default.hasStarted == "1") //als settings bestaan
             {
-                time = new Timer();
+                time.Enabled = true;
                 time.Interval = 1000;
                 time.Tick += Timer_Tick;
-                time.Enabled = true ;
             }
             else
             {

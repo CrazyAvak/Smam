@@ -30,6 +30,7 @@ namespace SmamForms
             {
                 listBox1.Items.Add(item);
             }
+            listBox1.Sorted = true;
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

@@ -16,6 +16,7 @@ namespace SmamForms
         {
             InitializeComponent();
             CenterToScreen(); //Form in het midden zetten
+            labelTitel.Left = (this.ClientSize.Width - labelTitel.Width) / 2;
         }
 
         private void button2_Click(object sender, EventArgs e)

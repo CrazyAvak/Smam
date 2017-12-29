@@ -90,7 +90,7 @@
             // textBoxOpleiding
             // 
             this.textBoxOpleiding.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxOpleiding.Location = new System.Drawing.Point(15, 357);
+            this.textBoxOpleiding.Location = new System.Drawing.Point(12, 357);
             this.textBoxOpleiding.Name = "textBoxOpleiding";
             this.textBoxOpleiding.Size = new System.Drawing.Size(315, 26);
             this.textBoxOpleiding.TabIndex = 5;
@@ -98,7 +98,7 @@
             // textBoxHuur
             // 
             this.textBoxHuur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHuur.Location = new System.Drawing.Point(15, 414);
+            this.textBoxHuur.Location = new System.Drawing.Point(12, 414);
             this.textBoxHuur.Name = "textBoxHuur";
             this.textBoxHuur.Size = new System.Drawing.Size(315, 26);
             this.textBoxHuur.TabIndex = 6;

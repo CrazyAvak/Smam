@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.buttonBack = new System.Windows.Forms.Button();
-            this.labelTitelSettings = new System.Windows.Forms.Label();
+            this.labelTitel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,16 +58,16 @@
             this.buttonBack.TabIndex = 1;
             this.buttonBack.UseVisualStyleBackColor = false;
             // 
-            // labelTitelSettings
+            // labelTitel
             // 
-            this.labelTitelSettings.BackColor = System.Drawing.Color.White;
-            this.labelTitelSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitelSettings.Location = new System.Drawing.Point(55, 9);
-            this.labelTitelSettings.Name = "labelTitelSettings";
-            this.labelTitelSettings.Size = new System.Drawing.Size(235, 37);
-            this.labelTitelSettings.TabIndex = 2;
-            this.labelTitelSettings.Text = "Instellingen";
-            this.labelTitelSettings.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelTitel.BackColor = System.Drawing.Color.White;
+            this.labelTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitel.Location = new System.Drawing.Point(55, 9);
+            this.labelTitel.Name = "labelTitel";
+            this.labelTitel.Size = new System.Drawing.Size(235, 37);
+            this.labelTitel.TabIndex = 2;
+            this.labelTitel.Text = "Instellingen";
+            this.labelTitel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label7
             // 
@@ -200,7 +200,7 @@
             this.Controls.Add(this.textBoxStreet);
             this.Controls.Add(this.textBoxCity);
             this.Controls.Add(this.textBoxName);
-            this.Controls.Add(this.labelTitelSettings);
+            this.Controls.Add(this.labelTitel);
             this.Controls.Add(this.buttonBack);
             this.MaximumSize = new System.Drawing.Size(355, 650);
             this.MinimumSize = new System.Drawing.Size(355, 650);
@@ -214,7 +214,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.Label labelTitelSettings;
+        private System.Windows.Forms.Label labelTitel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
