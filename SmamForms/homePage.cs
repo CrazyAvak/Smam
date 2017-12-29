@@ -18,12 +18,22 @@ namespace SmamForms
         {
             smam = new smamController();
             InitializeComponent();
+            CenterToScreen();
             fillHint();
         }   
 
         private void fillHint()
         {
-            labelHint.Text = smam.getHint().Body;
+            try
+            {
+                labelHint.Text = smam.getHint().Body;
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Het is niet gelukt om verbinding te maken met de server. SMAM zal nu sluiten.");
+                Application.Exit();
+            }
         }
 
         private void buttonSetting_Click(object sender, EventArgs e)
@@ -42,25 +52,26 @@ namespace SmamForms
             shopping.ShowDialog();
             shopping = null;
             this.Show();
-
-            smam = new smamController();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.Hide();
             smam.openTypelist(1.ToString()); //recept
+            this.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             smam.openTypelist(3.ToString()); //huishouden
-
+            this.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            POI poi = new POI();
+            POI poi = new POI(); //poi
             poi.ShowDialog();
             poi = null;
             this.Show();

@@ -18,8 +18,11 @@ namespace SmamForms
         public SplashScreenForm()
         {
             InitializeComponent();
+            CenterToScreen();
             if (Debugger.IsAttached)
+            {
                 Settings.Default.Reset();
+            }
             checkStart();
         }
         private void checkStart()

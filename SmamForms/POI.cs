@@ -41,5 +41,11 @@ namespace SmamForms
         {
             gMapControl1.Zoom += 1; //inzoomen
         }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Drukte backbutton in");
+            this.Hide();
+        }
     }
 }

@@ -32,10 +32,26 @@ namespace SmamForms
             }
         }
 
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Drukte backbutton in");
+            this.Hide();
+        }
+
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
-            string articlename = listBox1.SelectedItem.ToString();
-            smamControl.openArtikel(articlename);
+            try
+            {
+                string articlename = listBox1.SelectedItem.ToString();
+                this.Hide();
+                smamControl.openArtikel(articlename);
+                this.Show();
+            }
+            catch (Exception exception)
+            {
+                ExceptionToText ex = new ExceptionToText(exception.ToString());
+            }
+            
         }
 
     }

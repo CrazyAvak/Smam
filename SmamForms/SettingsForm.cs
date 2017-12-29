@@ -18,11 +18,6 @@ namespace SmamForms
             CenterToScreen(); //Form in het midden zetten
         }
 
-        private void buttonBack_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("Drukte backbutton in");
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             saveUserSettings save = new saveUserSettings();

@@ -27,6 +27,7 @@ namespace SmamForms
         private void buttonBack_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Drukte backbutton in");
+            this.Hide();
         }
 
         private void ArticleForm_Load(object sender, EventArgs e)

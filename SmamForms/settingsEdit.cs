@@ -20,6 +20,7 @@ namespace SmamForms
             smam = new smamController();
             getSettings();
         }
+
         private void getSettings()
         {
              settings = new saveUserSettings();
@@ -55,5 +56,13 @@ namespace SmamForms
                 this.Close();
             }
         }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Drukte backbutton in");
+            this.Hide();
+        }
+
+
     }
 }

@@ -49,13 +49,15 @@ namespace SmamForms
         {
             article.SetArticleName(articlename);
             ArticleForm articleForm = new ArticleForm(article.Name);
-            articleForm.Show();
+            articleForm.ShowDialog();
+            articleForm = null;
         }
 
         public void openTypelist(string type)
         {
             Typelist typelist = new Typelist(type);
-            typelist.Show();
+            typelist.ShowDialog();
+            typelist = null;
         }
 
         public string GetTypeName(string type)
