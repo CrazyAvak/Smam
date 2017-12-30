@@ -17,6 +17,7 @@ namespace SmamForms
         public settingsEdit()
         {
             InitializeComponent();
+            CenterToScreen();
             smam = new smamController();
             getSettings();
             labelTitel.Left = (this.ClientSize.Width - labelTitel.Width) / 2;
