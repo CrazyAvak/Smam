@@ -16,6 +16,7 @@ namespace SmamForms
         {
             InitializeComponent();
             CenterToScreen();
+            label1.Left = (this.ClientSize.Width - label1.Width) / 2;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -38,6 +39,7 @@ namespace SmamForms
             else
             {
                 save.saveUser(textBoxName.Text, textBoxCity.Text, textBoxStreet.Text, textBoxSchool.Text, textBoxOpleiding.Text, textBoxHuur.Text);
+                Properties.Settings.Default.hasStarted = 1.ToString();
                 save.isInstalled();
                 homePage home = new homePage();
                 home.Show();

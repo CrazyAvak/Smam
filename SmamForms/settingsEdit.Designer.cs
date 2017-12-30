@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(settingsEdit));
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,8 +41,9 @@
             this.textBoxStreet = new System.Windows.Forms.TextBox();
             this.textBoxCity = new System.Windows.Forms.TextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTitel = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label7
@@ -101,7 +103,7 @@
             // textBoxHuur
             // 
             this.textBoxHuur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHuur.Location = new System.Drawing.Point(15, 361);
+            this.textBoxHuur.Location = new System.Drawing.Point(12, 361);
             this.textBoxHuur.Name = "textBoxHuur";
             this.textBoxHuur.Size = new System.Drawing.Size(315, 26);
             this.textBoxHuur.TabIndex = 20;
@@ -109,7 +111,7 @@
             // textBoxOpleiding
             // 
             this.textBoxOpleiding.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxOpleiding.Location = new System.Drawing.Point(15, 304);
+            this.textBoxOpleiding.Location = new System.Drawing.Point(12, 304);
             this.textBoxOpleiding.Name = "textBoxOpleiding";
             this.textBoxOpleiding.Size = new System.Drawing.Size(315, 26);
             this.textBoxOpleiding.TabIndex = 19;
@@ -146,20 +148,21 @@
             this.textBoxName.Size = new System.Drawing.Size(315, 26);
             this.textBoxName.TabIndex = 15;
             // 
-            // label1
+            // labelTitel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 29);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Verander hier je settings";
+            this.labelTitel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTitel.AutoSize = true;
+            this.labelTitel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitel.Location = new System.Drawing.Point(106, 20);
+            this.labelTitel.Name = "labelTitel";
+            this.labelTitel.Size = new System.Drawing.Size(136, 29);
+            this.labelTitel.TabIndex = 27;
+            this.labelTitel.Text = "Instellingen";
             // 
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.Location = new System.Drawing.Point(17, 404);
+            this.buttonSave.Location = new System.Drawing.Point(12, 403);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(315, 33);
             this.buttonSave.TabIndex = 28;
@@ -167,13 +170,27 @@
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
+            // buttonBack
+            // 
+            this.buttonBack.BackColor = System.Drawing.Color.White;
+            this.buttonBack.FlatAppearance.BorderSize = 0;
+            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBack.Image = ((System.Drawing.Image)(resources.GetObject("buttonBack.Image")));
+            this.buttonBack.Location = new System.Drawing.Point(12, 12);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(37, 37);
+            this.buttonBack.TabIndex = 29;
+            this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
             // settingsEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 611);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonSave);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelTitel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -207,7 +224,8 @@
         private System.Windows.Forms.TextBox textBoxStreet;
         private System.Windows.Forms.TextBox textBoxCity;
         private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTitel;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonBack;
     }
 }

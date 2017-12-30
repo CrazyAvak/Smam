@@ -22,15 +22,13 @@ namespace SmamForms
         {
             connectionString = "Server=localhost;Database=smamdb;Uid=root;Pwd=;";
 
-            conn = new MySqlConnection(connectionString);
             try
             {
-
+                conn = new MySqlConnection(connectionString);
             }
             catch (Exception exception)
             {
-                ExceptionToText e = new ExceptionToText(exception.ToString());
-                MessageBox.Show("not connected");
+                ExceptionToText ex = new ExceptionToText(exception.ToString());
             }
         }
 
@@ -40,7 +38,7 @@ namespace SmamForms
             {
                 conn = new MySqlConnection(connectionString);
             }
-            string query = "SELECT * FROM article WHERE Name = '" + articlename + "'"; //is test van database
+            string query = "SELECT * FROM article WHERE Name = '" + articlename + "'";
             Console.WriteLine(query);
             DataTable dataTable = new DataTable();
             MySqlCommand querycmd = new MySqlCommand(query, conn);
@@ -95,10 +93,19 @@ namespace SmamForms
             }
             return output;
         }
+
         public Hint getHint()
         {
             DataTable table = new DataTable();
-            conn.Open();
+            try
+            {
+                conn.Open();
+            }
+            catch (Exception exception)
+            {
+                ExceptionToText ex = new ExceptionToText(exception.ToString());
+                return null;
+            }
             string query = "SELECT * FROM `hint` ORDER BY RAND() LIMIT 1;";
             MySqlCommand cmd = new MySqlCommand(query, conn);
             MySqlDataAdapter myAdapter = new MySqlDataAdapter();
@@ -113,7 +120,6 @@ namespace SmamForms
                 hint.Body = item["Description"].ToString();
             }
             return hint;
-
         }
         public List<string> getGroceryTypes()
         {

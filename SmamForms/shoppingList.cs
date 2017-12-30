@@ -33,6 +33,7 @@ namespace SmamForms
         }
         private void fillCheckList()
         {
+            checkedListBoxProducts.Items.Clear();
             foreach (string item in smam.getGroceryProducts(comboBoxTypes.Text))
             {
                 checkedListBoxProducts.Items.Add(item);
@@ -43,6 +44,12 @@ namespace SmamForms
         {
             checkedListBoxProducts.Items.Clear();
             fillCheckList();
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("Drukte backbutton in");
+            this.Hide();
         }
     }
 }

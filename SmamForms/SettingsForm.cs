@@ -16,11 +16,7 @@ namespace SmamForms
         {
             InitializeComponent();
             CenterToScreen(); //Form in het midden zetten
-        }
-
-        private void buttonBack_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("Drukte backbutton in");
+            labelTitel.Left = (this.ClientSize.Width - labelTitel.Width) / 2;
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -27,11 +27,13 @@ namespace SmamForms
         private void buttonBack_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Drukte backbutton in");
+            this.Hide();
         }
 
         private void ArticleForm_Load(object sender, EventArgs e)
         {
             labelTitelArticle.Text = articleName;
+            labelTitelArticle.Left = (this.ClientSize.Width - labelTitelArticle.Width) / 2;
             txtArticleText.Text = smamControl.GetArticleText(articleName); //test
             string articleID = smamControl.GetArticleID(articleName);
             foreach (string URL in smamControl.GetImageURL(articleID))
@@ -45,6 +47,18 @@ namespace SmamForms
                 this.Controls.Add(p); //toevoegen aan form
                 p.Load(URL); //link laden
                 i++; //voor locatie picturebox
+            }
+            foreach (Control c in Controls)
+            {
+                if (c is PictureBox)
+                {
+                    txtArticleText.Width = 234;
+                    break;
+                }
+                else
+                {
+                    txtArticleText.Width = 315;
+                }
             }
         }
 
