@@ -30,7 +30,10 @@ namespace SmamForms
         {
             Properties.Settings.Default.hasStarted = "1";
         }
-
+        public string getCity()
+        {
+            return Properties.Settings.Default.City;
+        }
         public userSetting getSettings()
         {
             userSetting setting = new userSetting();

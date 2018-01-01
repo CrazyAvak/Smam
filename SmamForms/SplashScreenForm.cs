@@ -52,7 +52,7 @@ namespace SmamForms
         private void buttonNext_Click(object sender, EventArgs e)
         {
             startSettings start = new startSettings();
-            this.Hide();
+            this.Hide();            
             start.Show();
         }
     }
