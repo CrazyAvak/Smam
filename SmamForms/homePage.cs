@@ -73,7 +73,7 @@ namespace SmamForms
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            POI poi = new POI(); //poi
+            poi2 poi = new poi2(); //poi
             poi.ShowDialog();
             poi = null;
             this.Show();
