@@ -15,7 +15,7 @@ namespace SmamForms
     public partial class poi2 : Form
     {
         private ChromiumWebBrowser chromeBrowser;
-        private string city ;
+        private string city;
 
         public poi2()
         {
