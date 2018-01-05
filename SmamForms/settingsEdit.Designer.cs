@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(settingsEdit));
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,7 +41,6 @@
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.labelTitel = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
-            this.buttonBack = new System.Windows.Forms.Button();
             this.numericUpDownHuur = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHuur)).BeginInit();
             this.SuspendLayout();
@@ -163,19 +161,6 @@
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
-            // buttonBack
-            // 
-            this.buttonBack.BackColor = System.Drawing.Color.White;
-            this.buttonBack.FlatAppearance.BorderSize = 0;
-            this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBack.Image = ((System.Drawing.Image)(resources.GetObject("buttonBack.Image")));
-            this.buttonBack.Location = new System.Drawing.Point(12, 12);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(37, 37);
-            this.buttonBack.TabIndex = 29;
-            this.buttonBack.UseVisualStyleBackColor = false;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
-            // 
             // numericUpDownHuur
             // 
             this.numericUpDownHuur.Location = new System.Drawing.Point(12, 361);
@@ -199,7 +184,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 611);
             this.Controls.Add(this.numericUpDownHuur);
-            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.labelTitel);
             this.Controls.Add(this.label7);
@@ -236,7 +220,6 @@
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelTitel;
         private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.NumericUpDown numericUpDownHuur;
     }
 }

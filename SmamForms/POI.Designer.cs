@@ -106,8 +106,8 @@
             this.MaximumSize = new System.Drawing.Size(355, 650);
             this.MinimumSize = new System.Drawing.Size(355, 650);
             this.Name = "POI";
-            this.Text = "POI";
-            this.Load += new System.EventHandler(this.POI_Load);
+            this.Text = "Mijn woonplaats";
+            this.Load += new System.EventHandler(this.POI_LoadAsync);
             this.ResumeLayout(false);
 
         }

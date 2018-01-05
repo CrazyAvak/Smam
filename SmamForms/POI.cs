@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GMap.NET;
 using GMap.NET.MapProviders;
+using Geocoding;
+using Geocoding.Google;
 
 namespace SmamForms
 {
@@ -20,12 +22,18 @@ namespace SmamForms
             CenterToScreen();
         }
 
-        private void POI_Load(object sender, EventArgs e)
+        private async void POI_LoadAsync(object sender, EventArgs e)
         {
+            //geocoding
+            GoogleGeocoder geocoder = new GoogleGeocoder() { ApiKey = "AIzaSyAoNyqmp8yYfRw0T5nMmGMiUKR3tyc5_JQ" };
+            Console.WriteLine(Properties.Settings.Default.City.ToString());
+            IEnumerable<Address> addresses = await geocoder.GeocodeAsync(Properties.Settings.Default.City.ToString() + " " + Properties.Settings.Default.Street.ToString());
+            //google maps control
             gMapControl1.MapProvider = GoogleMapProvider.Instance; //Google gebruiken
             gMapControl1.Manager.Mode = AccessMode.ServerOnly;
             GMapProvider.WebProxy = null; //geen proxy
-            gMapControl1.Position = new PointLatLng(51.4431256, 5.4783261); //locatie
+            Console.WriteLine(addresses.First().Coordinates.Latitude.ToString(), addresses.First().Coordinates.Longitude.ToString()); //debug
+            gMapControl1.Position = new PointLatLng(addresses.First().Coordinates.Latitude, addresses.First().Coordinates.Longitude); //location
             gMapControl1.DragButton = MouseButtons.Left; //drag instellen
             gMapControl1.MinZoom = 1;
             gMapControl1.MaxZoom = 20;
@@ -44,7 +52,6 @@ namespace SmamForms
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Drukte backbutton in");
             this.Hide();
         }
     }

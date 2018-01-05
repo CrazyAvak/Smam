@@ -58,31 +58,31 @@
             // 
             // buttonShoppingList
             // 
-            this.buttonShoppingList.Location = new System.Drawing.Point(60, 259);
+            this.buttonShoppingList.Location = new System.Drawing.Point(166, 259);
             this.buttonShoppingList.Name = "buttonShoppingList";
             this.buttonShoppingList.Size = new System.Drawing.Size(100, 100);
             this.buttonShoppingList.TabIndex = 2;
-            this.buttonShoppingList.Text = "Boodschappen";
+            this.buttonShoppingList.Text = "Boodschappen- lijstjes";
             this.buttonShoppingList.UseVisualStyleBackColor = true;
             this.buttonShoppingList.Click += new System.EventHandler(this.buttonShoppingList_Click);
             // 
             // buttonHuishouden
             // 
-            this.buttonHuishouden.Location = new System.Drawing.Point(166, 365);
+            this.buttonHuishouden.Location = new System.Drawing.Point(60, 259);
             this.buttonHuishouden.Name = "buttonHuishouden";
             this.buttonHuishouden.Size = new System.Drawing.Size(100, 100);
             this.buttonHuishouden.TabIndex = 3;
-            this.buttonHuishouden.Text = "Huishouden";
+            this.buttonHuishouden.Text = "Handleidingen";
             this.buttonHuishouden.UseVisualStyleBackColor = true;
             this.buttonHuishouden.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonPOI
             // 
-            this.buttonPOI.Location = new System.Drawing.Point(166, 259);
+            this.buttonPOI.Location = new System.Drawing.Point(60, 471);
             this.buttonPOI.Name = "buttonPOI";
             this.buttonPOI.Size = new System.Drawing.Size(100, 100);
             this.buttonPOI.TabIndex = 4;
-            this.buttonPOI.Text = "POI";
+            this.buttonPOI.Text = "Hoe ziet mijn woonplaats eruit?";
             this.buttonPOI.UseVisualStyleBackColor = true;
             this.buttonPOI.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -92,7 +92,7 @@
             this.buttonRecept.Name = "buttonRecept";
             this.buttonRecept.Size = new System.Drawing.Size(100, 100);
             this.buttonRecept.TabIndex = 5;
-            this.buttonRecept.Text = "Recept";
+            this.buttonRecept.Text = "Hoe maak ik een gerecht?";
             this.buttonRecept.UseVisualStyleBackColor = true;
             this.buttonRecept.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -102,17 +102,17 @@
             this.buttonSetting.Name = "buttonSetting";
             this.buttonSetting.Size = new System.Drawing.Size(100, 100);
             this.buttonSetting.TabIndex = 6;
-            this.buttonSetting.Text = "Instellingen";
+            this.buttonSetting.Text = "Mijn gegevens aanpassen";
             this.buttonSetting.UseVisualStyleBackColor = true;
             this.buttonSetting.Click += new System.EventHandler(this.buttonSetting_Click);
             // 
             // buttonFinancien
             // 
-            this.buttonFinancien.Location = new System.Drawing.Point(60, 471);
+            this.buttonFinancien.Location = new System.Drawing.Point(166, 365);
             this.buttonFinancien.Name = "buttonFinancien";
             this.buttonFinancien.Size = new System.Drawing.Size(100, 100);
             this.buttonFinancien.TabIndex = 7;
-            this.buttonFinancien.Text = "Financien";
+            this.buttonFinancien.Text = "Hoe ga ik met mijn geld om?";
             this.buttonFinancien.UseVisualStyleBackColor = true;
             this.buttonFinancien.Click += new System.EventHandler(this.buttonFinancien_Click);
             // 
