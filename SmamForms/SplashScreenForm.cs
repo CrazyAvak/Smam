@@ -20,10 +20,10 @@ namespace SmamForms
             InitializeComponent();
             CenterToScreen();
             time = new Timer();
-            if (Debugger.IsAttached)
-            {
-               Settings.Default.Reset();
-            }
+            //if (Debugger.IsAttached)
+            //{
+            //   Settings.Default.Reset();
+            //}
             checkStart();
         }
         private void checkStart()
